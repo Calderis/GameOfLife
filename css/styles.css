@@ -1,0 +1,201 @@
+/******** Conditionnement du tableau du Jeu de la Vie ************/
+#Life {
+    float:right;
+    padding:10px;
+}
+#Life table tbody tr th{
+    height:10px;
+    width:10px;
+    margin:0px;
+    height:0px;
+}
+/* cellule vivante */
+#living{
+    background-color: #373737;
+    height:10px;
+    width:10px;
+    transition-property:background-color ;
+     -webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-ms-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+/* cellule morte */
+#dead{
+    background-color: #fffffe;
+    height:10px;
+    width:10px;
+}
+/* cellule morte-vivante */
+#undead{
+    background-color: rgba(245, 86, 65, 0.63);
+    height:10px;
+    width:10px;
+}
+
+#living:hover{background-color:#f55641;}
+#dead:hover{background-color:#f55641;}
+#undead:hover{background-color:#f55641;}
+
+
+/*********************************** Mise en page générale ********************************/
+/************ Typographie ************/
+h1{font-size:34px;font-family:"MuseoSans-300", arial, sans-serif;}
+h2{font-size:14px;font-family:"MuseoSans-300", arial, sans-serif;}
+
+/* En-tete */
+header{
+    background-color:#343131;
+    height:100px;
+    margin-bottom:60px;
+}
+.logo {
+    font-family:"MuseoSans-300", arial, sans-serif;
+    color:white;
+    float:left;
+    padding:15px;
+    margin-left:60px;
+    margin-top:10px;
+}
+
+/* Page */
+.feuille {
+    width:1200px;
+    margin-top:60px;
+    margin:auto;
+    background-color:white;
+    margin-bottom:60px;
+}
+.background{
+    background-image:url(../images/windows-life_163888.jpg);
+    height:100%;
+}
+
+/* Menu - Options */
+.menu {
+    padding-left: 600px;
+    padding-top:15px;
+}
+.menu ul {
+}
+.menu ul li {
+    display:inline-block;
+}
+.menu ul li img {
+    padding:10px;
+}
+.menu ul li span {
+    display:none;
+    position:absolute;
+    background-color:#8cdd7f;
+    padding:8px;
+    border-radius:3px;
+    color:white;
+    opacity:0;
+    margin-left:30px;
+    margin-top:-15px;
+    transition-property:opacity display;
+    transition-duration:1s;
+}
+.menu ul li:hover span {
+    opacity:0.9;
+    display:block
+}
+.menu ul li a{
+    text-decoration:none;
+    font-family:"MuseoSans-300", arial, sans-serif;
+    color:white;
+}
+.menu ul li a:hover{
+    color:#58b4db;
+}
+.Option {
+    background-color:#474747;
+    color:white;
+    width:250px;
+    padding:20px;
+    height:800px;
+}
+.show{
+    display:block; 
+}
+.hide{
+    display:none;
+}
+#vitesse {
+    text-align:center;
+    background-color:#373737;
+    color:white;
+    border-radius:100px;
+    border:none;
+    border-right: 2px solid #373737;
+    padding:10px;
+    margin-top:60px;
+    margin-bottom:60px;
+    width:30%;
+    margin:auto;
+}
+
+#tours {
+    text-align:center;
+    background-color:#373737;
+    color:white;
+    border-radius:5px;
+    border:none;
+    border-right: 2px solid #373737;
+    padding:10px;
+    margin-bottom:30px;
+}
+
+.indice {
+    margin-top:20px;
+    margin-bottom:20px;
+    text-align:center;
+}
+
+/* Boutons */
+.button{
+    background-color:#a2a2a2;
+    border-radius:5px;
+    border:none;
+    border-right: 2px solid #373737;
+    padding:15px;
+    
+}
+.button:hover{
+    background-color:#8cdd7f;
+}
+.button2{
+    background-color:#373737;
+    color:white;
+    border-radius:5px;
+    border:none;
+    border-left: 5px solid #f55641;
+    border-right: 2px solid #373737;
+    padding:10px;
+    margin-bottom:15px;
+}
+/*********************************** Notifications ********************************/
+#notif{
+    position:fixed;
+    background-color:#f55641;
+    color:white;
+    width:180px;
+    height:30px;
+    margin-top:20px;
+    margin-left:20px;
+    padding:10px;
+    text-align:center;
+}
+#notif2{
+    position:fixed;
+    background-color:#f55641;
+    color:white;
+    width:180px;
+    height:20px;
+    margin-top:20px;
+    margin-left:20px;
+    padding:10px;
+    text-align:center;
+}

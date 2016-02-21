@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+<!-- BEGIN HEAD -->
+<head>
+    <meta charset="utf-8" />
+	<title>Game Of Life</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+	<meta content="Site des 2018" name="description" />
+	<meta content="Gladmore" name="author" />
+    <link rel="icon" href="images/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <script type="text/javascript" language="javascript" src="js/formes.js"></script>
+    <script type="text/javascript" language="javascript" src="js/notifications.js"></script>
+</head>
+<!-- END HEAD -->
+<!-- BEGIN BODY -->
+<body>
+    <section class="background">
+        <header>
+            <div class="hide" id="notif">Nouveau achievement débloqué !</div>
+            <div class="hide" id="notif2">Tableau sauvegardé</div>
+            <section class="logo"><h1>JEU DE LA VIE</h1><p>A Game from Rémi Wetteren & Matthieu Tourdes</p></section>
+            <section class="menu">
+                <ul>
+            <li><img id="Ach1" class="hide" src="images/AchievementA.png" width="50px" height="50px"><span>Achievement : Live Fast Die Young ! </br>(Vitesse x10 atteinte)</span></li>
+                    <li><img id="Ach2" class="hide" src="images/AchievementB.png" width="50px" height="50px"><span>Achievement : Les morts vivants existent, même ici! </br>(Laisser la trace du passage d'une cellule)</span></li>
+                    <li><img id="Ach3" class="hide" src="images/AchievementC.png" width="50px" height="50px"><span>Achievement : Moi! Moi je sais ! Pi = 3.14159265359.....Quelle mémoire! </br>(Avoir utilisé Sauvegarder/Charger)</span></li>
+                    <li><img id="Ach4" class="hide" src="images/AchievementD.png" width="50px" height="50px"><span>Achievement : Finalement, c'est pas si difficile d'être Dieu ! </br>(Engager un cycle de vie)</span></li>
+                    <li><img id="Ach5" class="hide" src="images/AchievementE.png" width="50px" height="50px"><span>Achievement : Et ça? Et ça, ça fait quoi ça? </br>(Découvrir toutes les formes spéciales)</span></li>
+                    <li><img id="Ach6" class="hide" src="images/AchievementF.png" width="50px" height="50px"><span>Achievement : Effacer... tuer... Appelez moi Dexter ! </br>(Utiliser le reset)</span></li>
+                    <li><img id="Ach7" class="hide" src="images/AchievementH.png" width="50px" height="50px"><span>Achievement : Félicitation! Vous êtes papa! </br>(Donner vie à une cellule)</span></li>
+                    <li><img id="Ach8" class="hide" src="images/AchievementG.png" width="50px" height="50px"><span>Achievement : 2026...2027...2028...courage, j'y suis presque ! </br>(Franchir le seuil des 1000 générations)</span></li>
+                </ul>
+            </section>
+        </header>
+        <section class="feuille">
+            <section id="Life">
+                
+            </section>
+            <section class="Option">
+                <form name='parametres'>
+                    <h1 color="white">PARAMETRES</h1><br><br>
+                    <h2 color="white">NOMBRE DE LIGNES<p>(max : 80)</p></h2>
+                    <INPUT class="button2" type="text" name="y" value="50"><br>
+                    <h2 color="white">NOMBRE DE COLONNES<p>(max : 80)</p></h2>
+                    <INPUT class="button2" type="text" name="x" value="50"><br>
+                    <INPUT class="button" type="button" value="Créer le tableau" onClick='start(parametres)'><br><br><br>
+                    <div class="hide" id="indication">
+                        <div class="indice">
+                            <INPUT class="button" type='button' onclick="random(A)" value='Aléatoire'>
+                            <INPUT class="button" type='button' onclick='clearTab(parametres)' value='Reset'><br><br>
+                            <INPUT class="button" type='button' onclick="stop()" value='<<'>
+                            <INPUT class="button" type='button' onclick="generate(A,B)" value='TourSuivant'>
+                            <INPUT class="button" type='button' onclick="run()" value='>>'>
+                                <p></br></p>
+                            <INPUT class="button" type='button' onclick="save(C, A)" value='Sauvegarder'>
+                            <INPUT class="button" type='button' onclick="load(C)" value='Charger'>
+                        </div>
+                        <div class="indice"><h1 id="vitesse"></h1></div>
+                        <div class="indice"><h1 id="tours"></h1></div>
+                        <INPUT class="button" type='button' onclick="switchFormes()" value='Formes Spéciales'>
+                
+                        <div class="indice"><h1 id="formes"></h1></div>
+                    </div>
+                </form>
+            </section>
+        </section>
+    </section>
+</body>
+<!-- END BODY -->
+</html>
+<script type="text/javascript" language="javascript" src="js/achievements.js"></script>
+<script type="text/javascript" language="javascript" src="js/Game.js"></script>
+<audio src="audio/bip.mp3" style="" id="hoverSound">Le navigateur ne supporte pas les sons</audio>
+
